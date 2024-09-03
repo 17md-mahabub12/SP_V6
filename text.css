@@ -1,1 +1,7 @@
 /* NRG GYM Title Font */
+h1#text{
+    color: aliceblue;
+    text-align: center;
+    margin-top: 130px;
+    font-size: 50px;
+}
