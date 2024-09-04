@@ -16,3 +16,21 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+
+/*Information 3 tabs*/
+.information {
+    display: flex;
+    justify-content: space-around;
+}
+
+.information li {
+    list-style: none; 
+    padding: 10px; 
+    border-radius: 5px;
+}
+.information li:first-child {
+    border: 2px solid #FF5733; 
+}
+.information li:last-child {
+    border: 2px solid #3498DB;
+}

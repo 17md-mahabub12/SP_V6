@@ -5,3 +5,16 @@ h1#text{
     margin-top: 130px;
     font-size: 50px;
 }
+
+
+#text{
+    color: aliceblue;
+}
+
+/* News Headline /Marquee */
+.marquee-style {
+    font-family: Arial, sans-serif; 
+    font-size: 20px;             
+    color: white;                
+    background-color: #214592;    
+}
