@@ -34,3 +34,21 @@
 .information li:last-child {
     border: 2px solid #3498DB;
 }
+/*Footer Contact Info*/
+.Contact-info {
+    background-color: black;
+    color: white;
+    padding: 20px;
+}
+
+.footer-content{
+    text-align: center;
+}
+
+/*Icon size*/
+.icon {
+    width: 44px;
+    height: 44px;
+    padding: 55px;
+    padding-bottom: 0px;
+}
