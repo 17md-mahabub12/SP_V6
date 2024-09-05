@@ -3,58 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign Up</title>
+    <title>Gym Signup</title>
+
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background-image: url('images/cover1.jpg');
+            background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
+            color: #fff;
         }
         .signup-container {
-            background-color: #fff;
-            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            width: 400px;
+            color: #fff;
         }
         h2 {
             text-align: center;
             margin-bottom: 20px;
+            color: #ffc107; /* Golden color to give a premium look */
         }
-        input[type="text"], input[type="email"], input[type="password"] {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #ffc107;
+        }
+        .form-group input {
+            width: 94%;
+            padding: 12px;
+            border: none;
             border-radius: 5px;
+            background-color: #333;
+            color: #fff;
         }
-        input[type="submit"] {
+        .form-group input:focus {
+            outline: none;
+            border: 2px solid #ffc107;
+        }
+        .submit-btn {
             width: 100%;
-            padding: 10px;
-            background-color: #28a745;
-            color: white;
+            padding: 12px;
+            background-color: #ffc107;
+            color: #000;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            font-size: 16px;
         }
-        input[type="submit"]:hover {
-            background-color: #218838;
+        .submit-btn:hover {
+            background-color: #e0a800;
+        }
+        .terms {
+            text-align: center;
+            font-size: 14px;
+        }
+        .terms a {
+            color: #ffc107;
+            text-decoration: none;
         }
     </style>
 </head>
 <body>
 
     <div class="signup-container">
-        <h2>Sign Up</h2>
-        <form action="signup_process.php" method="post">
-            <input type="text" name="username" placeholder="Username" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <input type="submit" value="Sign Up">
+        <h2>Join Our Gym</h2>
+        <form action="submit_signup" method="post">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Create a password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your password" required>
+            </div>
+            <button type="submit" class="submit-btn">Sign Up</button>
+            <p class="terms">By signing up, you agree to our <a href="#">Terms & Conditions</a></p>
         </form>
     </div>
+
 </body>
 </html>
