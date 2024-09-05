@@ -9,7 +9,8 @@
 
 
 /* CSS Copied from website : https://getcssscan.com/css-buttons-examples */
-.button{
+.button {
+  margin-top: 55px;
   background-color: #111827;
   border: 1px solid transparent;
   border-radius: .75rem;
@@ -23,29 +24,28 @@
   line-height: 1.5rem;
   padding: .75rem 1.2rem;
   text-align: center;
-  text-decoration: none #6B7280 solid;
-  text-decoration-thickness: auto;
-  transition-duration: .2s;
-  transition-property: background-color,border-color,color,fill,stroke;
-  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  text-decoration: none;
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
   width: auto;
 }
 
-.button-40:hover {
-  background-color: #374151;
+.button:hover {
+  background-color: #2563EB; /* Change the background color to blue */
+  border-color: #1D4ED8; /* Change border color */
+  color: #ffffff; /* Ensure text remains white */
 }
 
-.button-40:focus {
+.button:focus {
   box-shadow: none;
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
 
 @media (min-width: 768px) {
-  .button-40 {
+  .button {
     padding: .75rem 1.5rem;
   }
 }
