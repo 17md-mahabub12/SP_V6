@@ -23,17 +23,56 @@
     justify-content: space-around;
 }
 
-.information li {
-    list-style: none; 
-    padding: 10px; 
-    border-radius: 5px;
+.card {
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, border-color 1s ease-in-out; /* Smooth transition for zoom and border color */
+    padding: 20px;
+    border-radius: 8px;
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    color: white;
+    background-color: #090101; /* Default background */
+    border: 2px solid #FF5733; /* Default border color */
+    position: relative; /* For positioning the pseudo-elements */
 }
-.information li:first-child {
-    border: 2px solid #FF5733; 
+
+.card:hover {
+    transform: scale(1.05); /* Zoom effect */
+    animation: rgb-border 2s infinite; /* RGB lighting effect */
 }
-.information li:last-child {
+
+.card:nth-child(2) {
+    background-color: black;
     border: 2px solid #3498DB;
 }
+
+.card span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.card hr {
+    border: 1px solid #000;
+}
+
+/* RGB Border Animation */
+@keyframes rgb-border {
+    0% {
+        border-color: rgb(255, 0, 0); /* Red */
+    }
+    25% {
+        border-color: rgb(0, 255, 0); /* Green */
+    }
+    50% {
+        border-color: rgb(0, 0, 255); /* Blue */
+    }
+    75% {
+        border-color: rgb(255, 255, 0); /* Yellow */
+    }
+    100% {
+        border-color: rgb(255, 0, 255); /* Magenta */
+    }
+}
+
 /*Footer Contact Info*/
 .Contact-info {
     background-color: black;
