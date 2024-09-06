@@ -35,10 +35,6 @@
     position: relative; /* For positioning the pseudo-elements */
 }
 
-.card:hover {
-    transform: scale(1.05); /* Zoom effect */
-    animation: rgb-border 2s infinite; /* RGB lighting effect */
-}
 
 .card:nth-child(2) {
     background-color: black;
@@ -55,6 +51,12 @@
 }
 
 /* RGB Border Animation */
+.rgb-border {
+    border: 2px solid;
+    border-radius: 8px;
+    animation: rgb-border 5s infinite; /* Animate the border colors */
+}
+
 @keyframes rgb-border {
     0% {
         border-color: rgb(255, 0, 0); /* Red */
@@ -72,6 +74,11 @@
         border-color: rgb(255, 0, 255); /* Magenta */
     }
 }
+
+.rgb-border:hover {
+    animation-play-state: paused; /* Stops the animation on hover */
+}
+
 
 /*Footer Contact Info*/
 .Contact-info {
