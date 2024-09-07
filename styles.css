@@ -1,7 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 /*Universal Css*/
 * {
     list-style: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
     text-decoration: none;
     margin: 50;
     padding: 20;
@@ -31,18 +32,28 @@
     border-radius: 8px;
     cursor: pointer; 
     color: white;
-    background-color: #090101; 
+    /* background-color: #090101;  */
     border: 1px solid #FF5733; 
     position: relative; 
    
 }
 
-
-.card:nth-child(2) {
+.card:hover{
     background-color: black;
-    border: 2px solid #3498DB;
 }
 
+
+.card:nth-child(2) {
+    /* background-color: black; */
+    border: 2px solid #3498DB;
+}
+.card:hover{
+    background-color: black;
+}
+
+.card:nth-child(2):hover{
+    background-color: black;
+}
 .card span {
     display: block;
     margin-bottom: 10px;
@@ -58,6 +69,8 @@
     border-radius: 8px;
     animation: rgb-border 5s infinite; /* Animate the border colors */
 }
+
+.admission:hover{ background-color:#090101;}
 
 @keyframes rgb-border {
     0% {

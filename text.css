@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 /* NRG GYM Title Font */
 h1#text{
     color: aliceblue;
@@ -26,7 +27,7 @@ h1#text{
 .marquee-style {
     margin-top: 5px;
     padding: 5px;
-    font-family: Arial, sans-serif; 
+    font-family: "Roboto Condensed", sans-serif;
     font-size: 20px;             
     color: white;                
     background-color: #214592;    
