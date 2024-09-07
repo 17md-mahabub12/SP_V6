@@ -25,14 +25,16 @@
 
 .card {
     margin-bottom: 15px;
-    transition: transform 0.3s ease, border-color 1s ease-in-out; /* Smooth transition for zoom and border color */
+    margin-left: 5px;
+    transition: transform 0.3s ease, border-color 1s ease-in-out; 
     padding: 20px;
     border-radius: 8px;
-    cursor: pointer; /* Changes cursor to pointer on hover */
+    cursor: pointer; 
     color: white;
-    background-color: #090101; /* Default background */
-    border: 2px solid #FF5733; /* Default border color */
-    position: relative; /* For positioning the pseudo-elements */
+    background-color: #090101; 
+    border: 1px solid #FF5733; 
+    position: relative; 
+   
 }
 
 
