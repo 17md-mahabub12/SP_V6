@@ -133,13 +133,13 @@
         packageSelect.addEventListener('change', function() {
             let amount = 0;
             if (this.value === 'monthly') {
-                amount = 50; // Monthly Fee
+                amount = 1000; // Monthly Fee
             } else if (this.value === 'quarterly') {
-                amount = 135; // Quarterly Fee
+                amount = 4500; // Quarterly Fee
             } else if (this.value === 'yearly') {
-                amount = 500; // Yearly Fee
+                amount = 8000; // Yearly Fee
             }
-            totalAmount.textContent = amount + ' USD';
+            totalAmount.textContent = amount + ' TK';
         });
     </script>
 
