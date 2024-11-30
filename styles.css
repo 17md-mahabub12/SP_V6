@@ -1,0 +1,197 @@
+
+form {
+    max-width: 400px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #218838;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Welcome Message */
+.welcome-message {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff3103;
+    padding: 10px;
+    text-align: left;
+    margin: 10px;
+}
+
+/* Header Section */
+header {
+    background: linear-gradient(to right, #1d1d1d, #3a3a3a);
+    color: white;
+    padding: 20px 10px;
+    position: relative;
+}
+
+.nrg-header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.nrg-header .logo {
+    width: 150px;
+}
+
+/* Navbar Buttons */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.navbar .button {
+    background-color: #ff3103;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .button:hover {
+    background-color: #ff5733;
+}
+
+/* Information Section */
+.information {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #090101;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+.card h2 {
+    color: #ff3103;
+    margin-bottom: 10px;
+}
+
+.card p {
+    margin-bottom: 10px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #1d1d1d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer .footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+footer h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #ff5733;
+}
+
+footer .communication {
+    margin: 10px 0;
+}
+
+footer .icon {
+    width: 40px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+footer .icon:hover {
+    transform: scale(1.2);
+}
+/* Styling for the greeting message */
+.greeting {
+    font-size: 36px; /* Larger font size */
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background-color: #007BFF; /* Background color */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .welcome-message {
+        text-align: center;
+    }
+
+    .information {
+        flex-direction: column;
+        align-items: center;
+    }
+}
