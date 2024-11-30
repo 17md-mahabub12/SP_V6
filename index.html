@@ -1,91 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NRG GYM</title>
-    <!---CSS Section-->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="button.css">
-    <link rel="stylesheet" href="text.css">
-    <link rel="stylesheet" href="responsive.css">
-  
+    <script>
+        // Get the 'name' parameter from the URL for the welcome message
+        const urlParams = new URLSearchParams(window.location.search);
+        const userName = urlParams.get('name');
+        if (userName) {
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById('greeting').textContent = "Hello " + userName + ", Welcome to NRG GYM!";
+                document.getElementById('registration-button').style.display = "none"; // Hide registration button after registration
+            });
+        }
+    </script>
 </head>
 <body>
-<!--------------------------Header Section Here ------------------------------------->
     <header>
-        <div class="header">
-             <!--Header Button Div--->
-             <div class="navbar">
-                <li><a href="signup.html"> <button class="button">Sign Up</button></a></li>
-                <li><a href="registration.html"><button class="button">Registration</button></a></li>
-                <li><a href="#item">        <button class="button">Gym-accessories</button></a></li>
-        </div>
-                            
-          <!---Gym Title /Intro -->
-          <div class="nrg-header">
+        <div class="nrg-header">
             <img src="images/logo.png" alt="NRG Gym Logo" class="logo">
         </div>
-        
 
-<!---------------------------------------------------->
-
-<div class="information">
-  <div class="card rgb-border" style=" padding: 20px; border-radius: 8px;">
-      <span class ="admission" style="font-weight: bold; color: #ff3103; font-size: 24px;">Admission Details:</span><br><br>
-      <span style="font-weight: bold; color: #f6fafb;">Registration Fee: 1500 taka</span><br>
-      <span style="font-weight: bold; color: #008000;">Monthly Fee: 1000 taka</span><br>
-      <span style="font-weight: bold; color: #1e90ff;">Treadmill Charge: 200 taka</span><br>
-      <hr style="border: 1px solid #000;" />
-      <span class="quarter" style="background-color: #6363f7; padding: 5px; border-radius: 4px;">Quarter Plan</span>: 3000 taka<br><br>
-      <span class="halfyear" style="background-color: #096f7c; padding: 5px; border-radius: 4px;">Half Yearly Plan</span>: 4500 taka<br><br>
-      <span class="year" style="background-color: #1d896b; padding: 5px; border-radius: 4px;">Yearly Plan</span>: 8000 taka<br><br>
-  </div>
-
-  <div class="card rgb-border" style="padding: 20px; border-radius: 8px;">
-    <!-----------------------------------------NOTICE BOARD UPDATE------------------------------------------------------->
-      <span style="font-weight: bold; color: #ff3103; font-size: 24px;">Notice Board </span><br><br>
-
-      <span style="font-weight: bold; color: #ff3103; font-size: 20px;">
-        আসসালামু ওয়ালাইকুম,একটি ঘড়ি পাওয়া গেছে, উপযুক্ত প্রমাণসহ নিয়ে যাবেন।<br>
-         সবাই জিমে অবশ্যই তোয়ালে নিয়ে আসবেন।</span><br><br> 
-  </div>
-
-
-  
-  <div class="card rgb-border" style="border-radius:8px; padding: 20px;">
-      <span style="font-weight: bold; color: #FF5733; font-size: 24px;">Time Schedule:</span><br><br>
-      <span style="color: red;">Friday Off day</span>
-      <span style="color: #3498DB;">Male Time:</span><br>
-      6:30 am to 11:00 am<br>
-      & 4:00 pm to 10:30 pm<br><br>
-      <span style="color: #E74C3C;">Female Time:</span><br>
-      11:00 am to 4:00 pm <br>
-  </div>
-</div>
-
-        
+        <div class="navbar">
+            <a href="user.php"><button class="button" id="registration-button">Registration</button></a>
+            <a href="admin.php"><button class="button">Admin</button></a>
+        </div>
     </header>
 
-<!----------------------------Body Part Here-------------------------------------->
-  <section>
-<marquee  class="marquee-style">Welcome to "NRG GYM Website",Location:Khagan Bazar, Ashulia, Savar ,Dhaka, Bangladesh. Mobile Number: 0199605**** // 0179051****; Admission Ongoing !!</marquee>
-  </section>
-<!-----------------------------Footer Section Here-------------------------------------->
+    <!-- Welcome Message -->
+    <div id="greeting" class="greeting"></div>
 
-        <footer class="Contact-info" id="contact">
-            <div class="footer-content">
-            <h1>CONTACT US</h1>
-             <div class="commonication">
-                <a href="https://www.facebook.com/profile.php?id=61560189465369&mibextid=kFxxJD"><img src="images/fb.svg" alt="Icon" class="icon"> </a>
-                <a href="http://"><img src="images/insta.svg" alt="Icon" class="icon"></a>
-             </div>
-            <h3 class="name">Rejaul Islam</h3>
-            <h4 class="name">Trainer</h4>
-            <h3>Mobile No: 01666690912</h3>
-            <h3>Location: Khagan Bazar,  Ashulia,  Savar,  Dhaka-1320, Bangladesh.</h3>
-            </div>
-          </footer>
-          <!-------JAVA SCRIPT-->
-          <script src="js/new.js"></script>
-    
+    <!--------------------------Admission Details Section Here ------------------------------------>
+    <section class="information">
+        <div class="card">
+            <h2>Admission Details</h2>
+            <p><strong>Registration Fee:</strong> 1500 Taka</p>
+            <p><strong>Monthly Fee:</strong> 1000 Taka</p>
+            <p><strong>Treadmill Charge:</strong> 200 Taka</p>
+            <p><strong>Quarter Plan:</strong> 3000 Taka</p>
+            <p><strong>Half Yearly Plan:</strong> 4500 Taka</p>
+            <p><strong>Yearly Plan:</strong> 8000 Taka</p>
+        </div>
+
+        <div class="card">
+            <h2>Notice Board</h2>
+            <p>
+                আসসালামু ওয়ালাইকুম, একটি ঘড়ি পাওয়া গেছে, উপযুক্ত প্রমাণসহ নিয়ে যাবেন।<br>
+                সবাই জিমে অবশ্যই তোয়ালে নিয়ে আসবেন।
+            </p>
+        </div>
+
+        <div class="card">
+            <h2>Time-Schedule</h2>
+            <p><strong>Friday:</strong> Off day</p>
+            <p><strong>Male Time:</strong> 6:30 am to 11:00 am & 4:00 pm to 10:30 pm</p>
+            <p><strong>Female Time:</strong> 11:00 am to 4:00 pm</p>
+        </div>
+    </section>
+
+    <!-----------------------------Footer Section Here-------------------------------------->
+    <footer>
+        <div class="footer-content">
+            <h1>Contact Us</h1>
+            <p>Phone: 01666690912</p>
+            <p>Location: Khagan Bazar, Ashulia, SAVAR, Dhaka-1320</p>
+        </div>
+    </footer>
 </body>
 </html>
