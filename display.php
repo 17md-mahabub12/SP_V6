@@ -14,11 +14,10 @@ $result = mysqli_query($conn, $sql);
     <title>Admin Panel</title>
     <link rel="stylesheet" href="table.css">
     <script>
-        // Function to update the notice dynamically using LocalStorage
         function updateNotice() {
             const newNotice = document.getElementById('new-notice').value;
             if (newNotice.trim() !== '') {
-                localStorage.setItem('gymNotice', newNotice); // Save notice in LocalStorage
+                localStorage.setItem('gymNotice', newNotice); // Save notice to localStorage
                 alert('Notice updated successfully!');
                 document.getElementById('new-notice').value = ''; // Clear input field
             } else {
@@ -60,11 +59,9 @@ $result = mysqli_query($conn, $sql);
         <?php endwhile; ?>
     </table>
 
-    <h2>Update Notice</h2>
-    <textarea id="new-notice" rows="4" cols="50" 
-          placeholder="Enter the new notice here" 
-          style="margin-left: 30px; padding-left: 30px;"></textarea><br>
-    <button id="updateNotice()" style= "margin-left: 30px;">Update Notice</button>
+    <h2>Update Gym Notice</h2>
+    <textarea id="new-notice" rows="4" cols="50" placeholder="Enter the new notice here"></textarea><br>
+    <button onclick="updateNotice()">Update Notice</button>
 
     <footer>
         <h1>Contact Us</h1>
