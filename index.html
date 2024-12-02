@@ -15,6 +15,12 @@
                 document.getElementById('registration-button').style.display = "none"; // Hide registration button after registration
             });
         }
+
+        // Load and display the notice from LocalStorage
+        document.addEventListener("DOMContentLoaded", function() {
+            const notice = localStorage.getItem('gymNotice') || 'No notices available.';
+            document.getElementById('notice').innerText = notice;
+        });
     </script>
 </head>
 <body>
@@ -25,7 +31,7 @@
 
         <div class="navbar">
             <a href="user.php"><button class="button" id="registration-button">Registration</button></a>
-            <a href="admin.php"><button class="button">Admin</button></a>
+            <a href="admin.html"><button class="button">Admin</button></a>
         </div>
     </header>
 
@@ -46,10 +52,7 @@
 
         <div class="card">
             <h2>Notice Board</h2>
-            <p>
-                আসসালামু ওয়ালাইকুম, একটি ঘড়ি পাওয়া গেছে, উপযুক্ত প্রমাণসহ নিয়ে যাবেন।<br>
-                সবাই জিমে অবশ্যই তোয়ালে নিয়ে আসবেন।
-            </p>
+            <div id="notice">No notices available.</div> <!-- Notice dynamically loaded -->
         </div>
 
         <div class="card">

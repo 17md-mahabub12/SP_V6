@@ -12,7 +12,21 @@ $result = mysqli_query($conn, $sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Panel</title>
-    <link rel="stylesheet" href="table.css"> 
+    <link rel="stylesheet" href="table.css">
+    <script>
+        // Function to update the notice dynamically using LocalStorage
+        function updateNotice() {
+            const newNotice = document.getElementById('new-notice').value;
+            if (newNotice.trim() !== '') {
+                localStorage.setItem('gymNotice', newNotice); // Save notice in LocalStorage
+                alert('Notice updated successfully!');
+                document.getElementById('new-notice').value = ''; // Clear input field
+            } else {
+                alert('Please enter a valid notice.');
+            }
+        }
+    </script>
+</head>
 <body>
     <header>
         <h1>Admin Panel</h1>
@@ -26,7 +40,7 @@ $result = mysqli_query($conn, $sql);
             <th>Email</th>
             <th>Mobile</th>
             <th>Package</th>
-            <th>Fee</th> <!-- Display the Fee Column -->
+            <th>Fee</th>
             <th>Actions</th>
         </tr>
 
@@ -37,7 +51,7 @@ $result = mysqli_query($conn, $sql);
             <td><?php echo $row['gmail']; ?></td>
             <td><?php echo $row['mobile']; ?></td>
             <td><?php echo $row['package']; ?></td>
-            <td><?php echo $row['fee']; ?></td> <!-- Ensure the Fee is fetched and displayed -->
+            <td><?php echo $row['fee']; ?></td>
             <td>
                 <a href="edit.php?id=<?php echo $row['id']; ?>">Edit</a> |
                 <a href="delete.php?id=<?php echo $row['id']; ?>">Delete</a>
@@ -45,6 +59,12 @@ $result = mysqli_query($conn, $sql);
         </tr>
         <?php endwhile; ?>
     </table>
+
+    <h2>Update Notice</h2>
+    <textarea id="new-notice" rows="4" cols="50" 
+          placeholder="Enter the new notice here" 
+          style="margin-left: 30px; padding-left: 30px;"></textarea><br>
+    <button id="updateNotice()" style= "margin-left: 30px;">Update Notice</button>
 
     <footer>
         <h1>Contact Us</h1>
